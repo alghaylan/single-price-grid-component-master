@@ -1,0 +1,119 @@
+:root{
+--ff_primary:'Karla';
+--clr_primary:hsl(179, 62%, 43%);
+--clr_secondary: hsl(71, 73%, 54%);
+--clr_neutral_gray :hsl(204, 43%, 93%);
+--clr_neutral_blue :hsl(218, 22%, 67%);
+}
+*{
+    margin: 0;
+}
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+h1,h2, h3, p{
+    overflow-wrap: break-word;
+}
+body{
+    line-height: 1.5;
+    min-height: 100vh;
+    width: 100%;
+display: grid;
+place-content: center;
+background-color: var(--clr_neutral_gray);
+font-family: var(--ff_primary);
+}
+svg, img , canvas, video, picture{
+    display: block;
+    max-width: 100%;
+}
+h1{
+    color: var(--clr_primary);
+    font-size: 15px;
+   
+}
+h3{
+    font-size: 12px;
+}
+.container{
+    background-color:white;
+    border-radius: 5px;
+   
+    border-radius: 5px;
+}
+.main{
+    padding: 20px;
+}
+.main>h3{
+    color: var(--clr_secondary);
+}
+.subscription, .why_us{
+    background-color: var(--clr_primary);
+    color: white;
+    padding:  30px;
+}
+.subscription p{
+   opacity: 1;
+}
+.salairy{
+  display: flex;
+  justify-content: flex-start;  
+  align-items: center;
+}
+.salairy p{
+    opacity: .5;
+    font-size: 12px;
+    margin-left: 10px;
+}
+.salairy span{
+    font-size: 25px;
+    font-weight: 700;
+}
+button{
+    background-color: var(--clr_secondary);
+    border:0;
+    color:white;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 10px;
+    font-weight: 700;
+}
+.why_us{
+ opacity:.7; 
+
+}
+p{
+    font-size: 10px;
+    opacity: .5;
+}
+.why_us p{
+    width: 130px;
+    text-align: start;
+}
+@media (max-width: 600px) {
+   .container{
+    display: grid;
+    width: 231px;
+   } 
+   .main, .subscription, .why_us{
+    display: grid;
+    gap: 15px;
+   }
+}
+@media (min-width:601px) {
+  .container{
+    width: 399px;
+
+  } 
+  .content{
+    display: flex;
+  } 
+  .subscription, .why_us{
+    display: grid;
+  
+  }
+  button{
+    padding: 5px;
+    margin-top: 10px;
+  }
+}
